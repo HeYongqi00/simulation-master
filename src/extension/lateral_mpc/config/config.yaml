@@ -1,0 +1,54 @@
+lateral_ephi_kp1: 0.51                         #车速0-3.5时，航向角误差反馈增益 
+lateral_ephi_kp2: 0.36                         #车速3.5-5.5时，航向角误差反馈增益
+lateral_ephi_kp3: 0.34                         #车速5.5-6.5时，航向角误差反馈增益
+lateral_ephi_kp4: 0.24                        #车速6.5以上时，航向角误差反馈增益 0.22
+
+
+lateral_ed_kp1: 0.078                           #车速0-3.5时，横向偏移反馈增益
+lateral_ed_kp2: 0.0315                          #车速3.5-5.5时，横向偏移反馈增益
+lateral_ed_kp3: 0.0245                        #车速5.5-6.5时，横向偏移反馈增益
+lateral_ed_kp4: 0.017                       #车速6.5以上时，横向偏移反馈增益0.016
+
+
+lateral_ephi_kd1: 0                        #车速0-3.5时，航向角误差率反馈增益
+lateral_ephi_kd2: 0                         #车速3.5-5.5时，航向角误差率反馈增益
+lateral_ephi_kd3: 0                       #车速5.5-7.5时，航向角误差率反馈增益
+lateral_ephi_kd4: 0
+
+
+lateral_ed_kd1: 0                           #车速0-3.5时，横向偏移率反馈增益
+lateral_ed_kd2: 0.003                          #车速3.5-5.5时，横向偏移率反馈增益
+lateral_ed_kd3: 0.002                         #车速5.5-6.5时，横向偏移率反馈增益
+lateral_ed_kd4: 0.0015                          #车速6.5以上时，横向偏移率反馈增益
+
+
+lateral_ed_ki1: 0                        #车速0-3.5时，横向偏移率反馈增益
+lateral_ed_ki2: 0.0005                         #车速3.5-5.5时，横向偏移率反馈增益
+lateral_ed_ki3: 0.0004                          #车速5.5-6.5时，横向偏移率反馈增益
+lateral_ed_ki4: 0.0004                         #车速6.5以上时，横向偏移率反馈增益
+
+
+
+longitudinal_acc_plain_kp: 0.19              #平路加速PID参数
+longitudinal_acc_plain_ki: 0.004
+longitudinal_acc_plain_kd: 0
+
+
+longitudinal_acc_slope_kp: 0.5              #斜坡加速PID参数
+longitudinal_acc_slope_ki: 0.01
+longitudinal_acc_slope_kd: 0
+
+
+longitudinal_dec_kp: 26                     #刹车PID参数
+longitudinal_dec_ki: 0
+longitudinal_dec_kd: 0
+
+
+longitudinal_dec_open_loop: 20              #停车开环控制增益，越大刹车距离越短，刹车越剧烈
+longitudinal_dec_open_loop_start: 0         #停车开环控制初始值，越大反应越剧烈
+
+
+advance_distance_1: 8                       #车速0-3.5时，预瞄距离
+advance_distance_2: 10                      #车速3.5-5.5时，预瞄距离
+advance_distance_3: 15                      #车速5.5-7.5时，预瞄距离
+advance_distance_4: 20                      #车速7.5以上时，预瞄距离

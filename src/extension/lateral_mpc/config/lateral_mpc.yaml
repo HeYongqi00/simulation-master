@@ -1,0 +1,9 @@
+lateral_mpc:
+  ros__parameters:
+    stage_cost_error_y: 0.9
+    stage_cost_error_yaw: 1.6
+    stage_cost_omega: 1.5
+    terminal_cost_error_y: 0.9
+    terminal_cost_error_yaw: 1.6
+    prediction_horizon: 30
+    preview_point: 0

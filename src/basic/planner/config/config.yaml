@@ -1,0 +1,8 @@
+planner:
+  ros__parameters:
+    # file_name: '07_east_to_west.txt'
+    # file_name: 'ramp.txt'
+    file_name: 'huandao1.txt'
+    plan_horizon: 50
+    ref_speed: 2.0
+    choice: 0 # 默认是0，其他参数时ref_speed无效，速度为采轨迹时开车速度（不推荐）。
