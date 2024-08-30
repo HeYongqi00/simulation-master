@@ -82,7 +82,7 @@ namespace control {
         
         auto start = std::chrono::high_resolution_clock::now();
         vector<double> control_solutions;
-        control_solutions = GetSolution(error_state);
+        control_solutions = GetSolution(error_state);   
         ComputePredictions(car_state, control_solutions);
         // double L = 1.923;
         cout << "error_y = " << error_state.error_y << endl;
@@ -237,7 +237,6 @@ namespace control {
         CppAD::ipopt::solve_result<Dvector> solution;
         
         FG_eval fg_eval(&control_param, &car_state, msg_local_plan);
-
         CppAD::ipopt::solve<Dvector, FG_eval>(options, vars, vars_lowerbound, vars_upperbound, constraints_lowerbound, 
                                                 constraints_upperbound, fg_eval, solution);
         bool ok = true;
@@ -393,7 +392,7 @@ namespace control {
             fg[2 + control_param->error_y_start + i] = control_param->dt * (2.0 * error_yaw_now_) 
                                          + error_y_now_ - error_y_next_;
 
-            fg[2 + control_param->error_yaw_start + i] = control_param->dt * (-omega_now_ + 2.0 * msg_local_plan->kappa[i]) 
+            fg[2 + control_param->error_yaw_start + i] = control_param->dt * (-omega_now_ + 2.0 * 0.0) //kappa = 0.0
                                                                         + error_yaw_now_ - error_yaw_next_;
             // fg[2 + control_param->error_yaw_start + i] = control_param->dt * (-omega_now_ - 2.0 * msg_local_plan->kappa[i]) 
             //                                                             + error_yaw_now_ - error_yaw_next_;
