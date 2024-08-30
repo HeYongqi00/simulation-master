@@ -97,5 +97,5 @@
         "/home/heyongqi/heyongqi/AutoCar/install/adrc/lib/python3.8/site-packages",
         "/opt/ros/foxy/lib/python3.8/site-packages"
     ],
-    "cmake.sourceDirectory": "/home/heyongqi/newDisk/heyongqi/simulation-master/build/car_interfaces/car_interfaces__py"
+    "cmake.sourceDirectory": "/home/heyongqi/newDisk/heyongqi/sim_test/simulation-master/src/basic/car_interfaces"
 }
