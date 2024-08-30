@@ -45,7 +45,7 @@ class Pid(Node):
         self.subGPS = self.create_subscription(GpsInterface, 'gps_data', self.sub_callback_gps, 10)
         self.subCarOri = self.create_subscription(CarOriInterface, "car_ori_data", self.sub_callback_car_ori, 10)
         
-        root_path = os.getcwd() + "/src/extension/longitudinal_mpc/longitudinal_mpc/"  # 读取控制参数
+        root_path = os.getcwd() + "/src/extension/longitudinal_mpc/config/"  # 读取控制参数
         yaml_file = root_path + 'config.yaml'
         f = open(yaml_file)
         config = yaml.load(f)
