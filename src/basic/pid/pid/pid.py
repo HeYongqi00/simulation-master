@@ -41,8 +41,11 @@ class Pid(Node):
         self.subGPS = self.create_subscription(GpsInterface, 'gps_data', self.sub_callback_gps, 10)
         self.subCarOri = self.create_subscription(CarOriInterface, "car_ori_data", self.sub_callback_car_ori, 10)
         
-        root_path = os.getcwd() + "/src/basic/pid/pid/"  # 读取控制参数
+        
+        
+        root_path = os.getcwd() + "/src/basic/pid/config/"  # 读取控制参数
         yaml_file = root_path + 'config.yaml'
+        
         f = open(yaml_file)
         config = yaml.load(f)
         self.yaml_data = EasyDict(config)
@@ -73,7 +76,7 @@ class Pid(Node):
         
     ###############################################################
         #数据存贮
-        file_name_ = os.getcwd() + '/data/results/' + str(datetime.datetime.now()) +'.txt' 
+        file_name_ = os.getcwd() + '/data/results/' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S') +'.txt'
         self.saveData = open(file_name_,"w")
         #0, 1, 2, 3  为  refspeed, nowspeed, throttle, braking
         #4, 5, 6, 7, 8, 9 为 ref_x, ref_y, ref_yaw, nowx, nowy, nowyaw
