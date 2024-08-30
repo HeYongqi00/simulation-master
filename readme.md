@@ -22,8 +22,8 @@ ros2 launch start_simulation start_simulation.launch.py
 文件`src/basic/start_simulation/config/simulation.yaml`用于仿真节点`sim_model`和规划器`planner`参数配置。
 - 控制程序启动（任选一个）
 ```
-ros2 run pid pid    // 启动PID控制节点
+ros2 launch pid pid.launch.py    // 启动PID控制节点
 ros2 launch lateral_mpc lateral_mpc.launch.py // 启动横向MPC控制节点
-ros2 run longitudinal_mpc longitudinal_mpc  // 启动纵向MPC控制节点
+ros2 launch longitudinal_mpc longitudinal_mpc.launch.py  // 启动纵向MPC控制节点
 ros2 launch trajectory_mpc trajectory_mpc.launch.py // 启动MPC轨迹跟踪节点
 ```
