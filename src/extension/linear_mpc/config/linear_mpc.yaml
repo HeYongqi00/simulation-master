@@ -1,0 +1,14 @@
+linear_mpc:
+  ros__parameters:
+    stage_cost_delta: 0.9
+    stage_cost_error_x: 2.0
+    stage_cost_error_y: 4.5
+    stage_cost_error_v: 3.0
+    stage_cost_error_w: 3.0
+    terminal_cost_error_x: 5.0
+    terminal_cost_error_y: 6.0
+    prediction_horizon: 10
+    preview_point: 5
+    Ks: 1.0
+    tau_s: 0.06
+    L: 2.0
